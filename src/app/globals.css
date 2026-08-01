@@ -33,6 +33,69 @@
   .footer-link {
     @apply text-[13px] text-white/30 transition-colors duration-200 hover:text-white/60;
   }
+
+  .gradient-text {
+    @apply bg-linear-to-br from-[#6D5EF5] to-[#00C2FF] bg-clip-text text-transparent;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-xl bg-linear-to-br
+    from-[#6D5EF5] to-[#5B4FE8] px-6 py-3.5 text-sm font-semibold
+    text-white transition-all duration-200
+    hover:-translate-y-0.5 hover:opacity-90 active:scale-[0.97];
+
+    box-shadow:
+      0 0 28px rgba(109, 94, 245, 0.4),
+      0 4px 16px rgba(0, 0, 0, 0.5);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 rounded-xl border border-white/10
+    px-6 py-3.5 text-sm font-semibold text-white/70
+    transition-all duration-200 hover:-translate-y-0.5
+    hover:border-white/25 hover:text-white;
+  }
+
+  .hero-grid {
+    opacity: 0.025;
+
+    background-image:
+      linear-gradient(
+        rgba(255, 255, 255, 0.5) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.5) 1px,
+        transparent 1px
+      );
+
+    background-size: 64px 64px;
+  }
+
+  .hero-glow-violet {
+    background: radial-gradient(
+      circle,
+      rgba(109, 94, 245, 0.18),
+      transparent 65%
+    );
+  }
+
+  .hero-glow-cyan {
+    background: radial-gradient(
+      circle,
+      rgba(0, 194, 255, 0.12),
+      transparent 65%
+    );
+  }
+
+  .hero-glow-center {
+    background: radial-gradient(
+      circle,
+      rgba(109, 94, 245, 0.06),
+      transparent 70%
+    );
+  }
 }
 
 body {

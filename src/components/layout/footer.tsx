@@ -1,6 +1,4 @@
-import { Mail } from "lucide-react";
-
-import { FiGithub, FiLinkedin } from "react-icons/fi";
+import { FiMail, FiGithub, FiLinkedin } from "react-icons/fi";
 
 import { footerResources, footerServices } from "@/src/data/navigation";
 
@@ -18,7 +16,7 @@ const socialLinks = [
   {
     label: "Email",
     href: "mailto:hello@shnexus.dev",
-    icon: Mail,
+    icon: FiMail,
   },
 ] as const;
 
