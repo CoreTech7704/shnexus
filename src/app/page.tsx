@@ -1,6 +1,8 @@
-import { Footer } from "@/src/components/layout/footer";
-import { Navbar } from "@/src/components/layout/navbar";
-import { Hero } from "@/src/components/sections/hero";
+import { Footer } from "../components/layout/footer";
+import { Navbar } from "../components/layout/navbar";
+import { Hero } from "../components/sections/hero";
+import { Services } from "../components/sections/services";
+import { WhyUs } from "../components/sections/why-us";  
 
 export default function Home() {
   return (
@@ -8,7 +10,9 @@ export default function Home() {
       <Navbar />
 
       <main>
-       <Hero />
+        <Hero />
+        <Services />
+        <WhyUs />
       </main>
 
       <Footer />

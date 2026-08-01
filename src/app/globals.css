@@ -96,6 +96,18 @@
       transparent 70%
     );
   }
+
+  .card {
+    @apply rounded-2xl border border-white/[0.07] bg-[#111827];
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:border-[#6D5EF5]/35;
+
+    &:hover {
+      box-shadow: 0 16px 45px rgba(109, 94, 245, 0.08);
+    }
+  }
 }
 
 body {
