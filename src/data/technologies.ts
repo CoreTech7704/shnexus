@@ -1,4 +1,5 @@
 import {
+    SiRender,
   SiDocker,
   SiExpress,
   SiFigma,
@@ -15,8 +16,6 @@ import {
   SiTypescript,
   SiVercel,
 } from "react-icons/si";
-
-import { FaAws } from "react-icons/fa";
 
 import type { TechCategory } from "@/src/types/technology";
 
@@ -55,7 +54,7 @@ export const techCategories: TechCategory[] = [
       { name: "Vercel", icon: SiVercel },
       { name: "Netlify", icon: SiNetlify },
       { name: "Docker", icon: SiDocker },
-      { name: "AWS", icon: FaAws },
+      { name: "Render", icon: SiRender },
     ],
   },
   {

@@ -6,6 +6,7 @@ import { WhyUs } from "../components/sections/why-us";
 import { Process } from "@/src/components/sections/process";
 import { Projects } from "@/src/components/sections/projects";
 import { TechStack } from "@/src/components/sections/tech-stack";
+import { About } from "@/src/components/sections/about";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <Process />
         <Projects />
         <TechStack />
+        <About />
       </main>
 
       <Footer />

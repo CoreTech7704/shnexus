@@ -20,6 +20,10 @@ const space_Grotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL("https://shnexus.dev"),
 
+  verification: {
+    google: "s3xesMPTBFiRpfC8cJFTG9CjAalGTx6hincsH0nWg18",
+  },
+
   title: {
     default: "sh Nexus",
     template: "%s | sh Nexus",
