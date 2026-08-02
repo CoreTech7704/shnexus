@@ -60,15 +60,8 @@
     opacity: 0.025;
 
     background-image:
-      linear-gradient(
-        rgba(255, 255, 255, 0.5) 1px,
-        transparent 1px
-      ),
-      linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0.5) 1px,
-        transparent 1px
-      );
+      linear-gradient(rgba(255, 255, 255, 0.5) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.5) 1px, transparent 1px);
 
     background-size: 64px 64px;
   }
@@ -107,6 +100,21 @@
     &:hover {
       box-shadow: 0 16px 45px rgba(109, 94, 245, 0.08);
     }
+  }
+
+  .tech-card {
+    transition:
+      transform 300ms ease,
+      border-color 300ms ease,
+      box-shadow 300ms ease;
+  }
+
+  .tech-card:hover {
+    border-color: color-mix(in srgb, var(--accent) 35%, transparent);
+
+    box-shadow:
+      0 16px 40px rgba(0, 0, 0, 0.25),
+      0 0 30px color-mix(in srgb, var(--accent) 8%, transparent);
   }
 }
 
