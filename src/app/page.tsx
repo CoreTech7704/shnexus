@@ -7,6 +7,9 @@ import { Process } from "@/src/components/sections/process";
 import { Projects } from "@/src/components/sections/projects";
 import { TechStack } from "@/src/components/sections/tech-stack";
 import { About } from "@/src/components/sections/about";
+import { Testimonials } from "@/src/components/sections/testimonials";
+import { FAQ } from "@/src/components/sections/faq";
+import { CTA } from "@/src/components/sections/cta";
 
 export default function Home() {
   return (
@@ -21,6 +24,9 @@ export default function Home() {
         <Projects />
         <TechStack />
         <About />
+        <Testimonials />
+        <FAQ />
+        <CTA />
       </main>
 
       <Footer />
