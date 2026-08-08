@@ -4,4 +4,5 @@ export interface Stat {
   label: string;
   description: string;
   icon: LucideIcon;
+  accent: string;
 }

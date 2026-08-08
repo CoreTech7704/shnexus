@@ -57,7 +57,7 @@ export function Hero() {
             </a>
 
             <a href="#projects" className="btn-secondary">
-              Explore Our Work
+              View Our Work
             </a>
           </div>
 
