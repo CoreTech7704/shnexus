@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 import { navigation } from "@/src/data/navigation";
 import { cn } from "@/src/lib/utils";
@@ -39,21 +41,26 @@ export function Navbar() {
       >
         <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-6">
           {/* Logo */}
-          <a
+          <Link
             href="#home"
             aria-label="sh Nexus home"
             className="group flex items-center gap-2"
           >
-            <div className="flex size-7 items-center justify-center rounded-lg bg-linear-to-br from-[#6D5EF5] to-[#00C2FF] transition-opacity group-hover:opacity-90">
-              <span className="font-heading text-[11px] font-bold text-white">
-                SN
-              </span>
+            <div className="flex size-7 items-center justify-center">
+              <Image
+                src="/images/logo.png"
+                alt="sh Nexus"
+                width={120}
+                height={32}
+                priority
+                className="h-7 w-auto"
+              />
             </div>
 
             <span className="font-heading text-[15px] font-bold tracking-tight text-white">
               sh Nexus
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden items-center gap-7 md:flex">
