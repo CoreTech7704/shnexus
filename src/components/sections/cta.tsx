@@ -46,9 +46,12 @@ export function CTA() {
                 <ArrowRight size={15} />
               </a>
 
-              <a href="mailto:hello@shnexus.dev" className="btn-secondary">
+              <a
+                href="mailto:sarvampatel456@gmail.com"
+                className="btn-secondary"
+              >
                 <Mail size={15} />
-                hello@shnexus.dev
+                sarvampatel456@gmail.com
               </a>
             </div>
 

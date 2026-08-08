@@ -15,7 +15,7 @@ const socialLinks = [
   },
   {
     label: "Email",
-    href: "mailto:hello@shnexus.dev",
+    href: "mailto:sarvampatel456@gmail.com",
     icon: FiMail,
   },
 ] as const;
@@ -26,8 +26,8 @@ const contactLinks = [
     href: "#contact",
   },
   {
-    label: "hello@shnexus.dev",
-    href: "mailto:hello@shnexus.dev",
+    label: "sarvampatel456@gmail.com",
+    href: "mailto:sarvampatel456@gmail.com",
   },
   {
     label: "GitHub",

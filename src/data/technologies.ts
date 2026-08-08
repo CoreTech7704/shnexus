@@ -17,11 +17,20 @@ import {
   SiVercel,
 } from "react-icons/si";
 
+import {
+  LuPanelsTopLeft,
+  LuServer,
+  LuDatabase,
+  LuRocket,
+  LuPalette,
+} from "react-icons/lu";
+
 import type { TechCategory } from "@/src/types/technology";
 
 export const techCategories: TechCategory[] = [
   {
     title: "Frontend",
+    icon: LuPanelsTopLeft,
     accent: "#6D5EF5",
     technologies: [
       { name: "React", icon: SiReact },
@@ -32,6 +41,7 @@ export const techCategories: TechCategory[] = [
   },
   {
     title: "Backend",
+    icon: LuServer,
     accent: "#00C2FF",
     technologies: [
       { name: "Node.js", icon: SiNodedotjs },
@@ -40,6 +50,7 @@ export const techCategories: TechCategory[] = [
   },
   {
     title: "Database",
+    icon: LuDatabase,
     accent: "#22C55E",
     technologies: [
       { name: "MongoDB", icon: SiMongodb },
@@ -49,6 +60,7 @@ export const techCategories: TechCategory[] = [
   },
   {
     title: "Deployment",
+    icon: LuRocket,
     accent: "#F59E0B",
     technologies: [
       { name: "Vercel", icon: SiVercel },
@@ -59,6 +71,7 @@ export const techCategories: TechCategory[] = [
   },
   {
     title: "Tools & Design",
+    icon: LuPalette,
     accent: "#EC4899",
     technologies: [
       { name: "Figma", icon: SiFigma },
