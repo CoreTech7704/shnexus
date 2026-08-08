@@ -18,15 +18,15 @@ const space_Grotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://shnexus.dev"),
+  metadataBase: new URL("https://shnexus.vercel.app"),
 
   verification: {
     google: "s3xesMPTBFiRpfC8cJFTG9CjAalGTx6hincsH0nWg18",
   },
 
   title: {
-    default: "sh Nexus",
-    template: "%s | sh Nexus",
+    default: "SH Nexus",
+    template: "%s | SH Nexus",
   },
 
   description:
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   ],
 
   openGraph: {
-    title: "sh Nexus",
+    title: "SH Nexus",
     description:
       "Modern Digital Product Studio",
     type: "website",

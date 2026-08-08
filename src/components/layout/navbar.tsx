@@ -11,6 +11,7 @@ import { cn } from "@/src/lib/utils";
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,6 +26,48 @@ export function Navbar() {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const sections = navigation
+      .map((link) => document.querySelector(link.href))
+      .filter((section): section is HTMLElement => section !== null);
+
+    if (!sections.length) return;
+
+    const observer = new IntersectionObserver(
+      () => {
+        const viewportAnchor = window.innerHeight * 0.3;
+
+        const visibleSections = sections
+          .map((section) => {
+            const rect = section.getBoundingClientRect();
+
+            return {
+              id: section.id,
+              distance: Math.abs(rect.top - viewportAnchor),
+              isVisible:
+                rect.top <= viewportAnchor && rect.bottom >= viewportAnchor,
+            };
+          })
+          .filter((section) => section.isVisible)
+          .sort((a, b) => a.distance - b.distance);
+
+        if (visibleSections.length > 0) {
+          setActiveSection(visibleSections[0].id);
+        }
+      },
+      {
+        rootMargin: "-10% 0px -70% 0px",
+        threshold: 0,
+      },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      observer.disconnect();
     };
   }, []);
 
@@ -45,6 +88,7 @@ export function Navbar() {
             href="#home"
             aria-label="sh Nexus home"
             className="group flex items-center gap-2"
+            onClick={() => setActiveSection("home")}
           >
             <div className="flex size-7 items-center justify-center">
               <Image
@@ -58,21 +102,40 @@ export function Navbar() {
             </div>
 
             <span className="font-heading text-[15px] font-bold tracking-tight text-white">
-              sh Nexus
+              SH Nexus
             </span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden items-center gap-7 md:flex">
-            {navigation.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-[13px] text-white/40 transition-colors duration-200 hover:text-white/80"
-              >
-                {link.label}
-              </a>
-            ))}
+            {navigation.map((link) => {
+              const sectionId = link.href.replace("#", "");
+              const isActive = activeSection === sectionId;
+
+              return (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  aria-current={isActive ? "page" : undefined}
+                  onClick={() => setActiveSection(sectionId)}
+                  className={cn(
+                    "relative text-[13px] transition-colors duration-200",
+                    isActive
+                      ? "text-white"
+                      : "text-white/40 hover:text-white/80",
+                  )}
+                >
+                  {link.label}
+
+                  {isActive && (
+                    <span
+                      aria-hidden="true"
+                      className="absolute -bottom-2 left-1/2 size-1 -translate-x-1/2 rounded-full bg-[#6D5EF5] shadow-[0_0_8px_rgba(109,94,245,0.8)]"
+                    />
+                  )}
+                </a>
+              );
+            })}
           </div>
 
           {/* Desktop CTA */}
@@ -109,16 +172,30 @@ export function Navbar() {
           )}
         >
           <div className="space-y-1 px-6 py-5">
-            {navigation.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="block rounded-lg px-3 py-2.5 text-sm text-white/50 transition-colors hover:bg-white/4 hover:text-white"
-                onClick={() => setMobileOpen(false)}
-              >
-                {link.label}
-              </a>
-            ))}
+            {navigation.map((link) => {
+              const sectionId = link.href.replace("#", "");
+              const isActive = activeSection === sectionId;
+
+              return (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  aria-current={isActive ? "page" : undefined}
+                  onClick={() => {
+                    setActiveSection(sectionId);
+                    setMobileOpen(false);
+                  }}
+                  className={cn(
+                    "block rounded-lg px-3 py-2.5 text-sm transition-colors duration-200",
+                    isActive
+                      ? "bg-[#6D5EF5]/10 text-white"
+                      : "text-white/50 hover:bg-white/4 hover:text-white",
+                  )}
+                >
+                  {link.label}
+                </a>
+              );
+            })}
 
             <a
               href="#contact"
