@@ -5,10 +5,7 @@ import { features } from "@/src/data/features";
 
 export function WhyUs() {
   return (
-    <section
-      id="why-us"
-      className="relative overflow-hidden py-24 sm:py-28"
-    >
+    <section id="why-us" className="relative overflow-hidden py-24 sm:py-28">
       {/* Background glow */}
       <div
         aria-hidden="true"
@@ -21,9 +18,7 @@ export function WhyUs() {
           title={
             <>
               Built for Speed.{" "}
-              <span className="gradient-text">
-                Designed for Growth.
-              </span>
+              <span className="gradient-text">Designed for Growth.</span>
             </>
           }
           description="We combine modern technology, thoughtful design, and a straightforward development process to build digital products that perform."
@@ -31,10 +26,7 @@ export function WhyUs() {
 
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => (
-            <FeatureCard
-              key={feature.title}
-              feature={feature}
-            />
+            <FeatureCard key={feature.title} feature={feature} />
           ))}
         </div>
       </Container>

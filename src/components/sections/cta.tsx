@@ -4,10 +4,7 @@ import { Container } from "@/src/components/ui/container";
 
 export function CTA() {
   return (
-    <section
-      id="contact"
-      className="relative overflow-hidden py-24 sm:py-28"
-    >
+    <section id="contact" className="relative overflow-hidden py-24 sm:py-28">
       <Container>
         <div className="relative overflow-hidden rounded-3xl border border-white/8 bg-[#111827] px-6 py-16 text-center shadow-[0_0_80px_rgba(109,94,245,0.1)] sm:px-10 sm:py-20 lg:px-16">
           {/* Background effects */}
@@ -39,23 +36,17 @@ export function CTA() {
             </h2>
 
             <p className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-white/40 sm:text-base">
-              Tell us what you&apos;re building and we&apos;ll help you turn
-              the idea into a fast, modern, and scalable digital product.
+              Tell us what you&apos;re building and we&apos;ll help you turn the
+              idea into a fast, modern, and scalable digital product.
             </p>
 
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <a
-                href="mailto:hello@shnexus.dev"
-                className="btn-primary"
-              >
+              <a href="mailto:hello@shnexus.dev" className="btn-primary">
                 Start Your Project
                 <ArrowRight size={15} />
               </a>
 
-              <a
-                href="mailto:hello@shnexus.dev"
-                className="btn-secondary"
-              >
+              <a href="mailto:hello@shnexus.dev" className="btn-secondary">
                 <Mail size={15} />
                 hello@shnexus.dev
               </a>

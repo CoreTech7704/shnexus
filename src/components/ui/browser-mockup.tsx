@@ -21,9 +21,7 @@ export function BrowserMockup({
         <div className="ml-2 flex h-5 flex-1 items-center gap-2 rounded-md bg-white/5 px-3">
           <span className="size-1.5 rounded-full bg-green-400/60" />
 
-          <span className="font-mono text-[10px] text-white/30">
-            {url}
-          </span>
+          <span className="font-mono text-[10px] text-white/30">{url}</span>
         </div>
       </div>
 

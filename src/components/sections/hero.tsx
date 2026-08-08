@@ -15,10 +15,7 @@ export function Hero() {
       className="relative flex min-h-screen items-center overflow-hidden pt-14"
     >
       {/* Background */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0"
-      >
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
         <div className="hero-grid absolute inset-0" />
 
         <div className="hero-glow-violet absolute left-[-5%] top-[-15%] size-175 rounded-full" />
@@ -41,10 +38,7 @@ export function Hero() {
 
           {/* Heading */}
           <h1 className="font-heading mb-6 text-5xl font-bold leading-[1.06] tracking-tight text-white md:text-6xl xl:text-[68px]">
-            Building{" "}
-            <span className="gradient-text">
-              Modern Digital
-            </span>{" "}
+            Building <span className="gradient-text">Modern Digital</span>{" "}
             Experiences That Scale.
           </h1>
 
@@ -57,18 +51,12 @@ export function Hero() {
 
           {/* Actions */}
           <div className="mb-10 flex flex-wrap gap-3">
-            <a
-              href="#contact"
-              className="btn-primary"
-            >
+            <a href="#contact" className="btn-primary">
               Start Your Project
               <ArrowRight size={15} />
             </a>
 
-            <a
-              href="#projects"
-              className="btn-secondary"
-            >
+            <a href="#projects" className="btn-secondary">
               Explore Our Work
             </a>
           </div>
@@ -76,18 +64,10 @@ export function Hero() {
           {/* Trust Points */}
           <div className="flex flex-wrap items-center gap-5">
             {trustPoints.map((point) => (
-              <div
-                key={point}
-                className="flex items-center gap-1.5"
-              >
-                <CheckCircle2
-                  size={13}
-                  className="shrink-0 text-green-400"
-                />
+              <div key={point} className="flex items-center gap-1.5">
+                <CheckCircle2 size={13} className="shrink-0 text-green-400" />
 
-                <span className="text-xs text-white/40">
-                  {point}
-                </span>
+                <span className="text-xs text-white/40">{point}</span>
               </div>
             ))}
           </div>

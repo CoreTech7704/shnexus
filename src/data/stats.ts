@@ -1,9 +1,4 @@
-import {
-  BriefcaseBusiness,
-  Code2,
-  Handshake,
-  Zap,
-} from "lucide-react";
+import { BriefcaseBusiness, Code2, Handshake, Zap } from "lucide-react";
 
 import type { Stat } from "@/src/types/stat";
 
